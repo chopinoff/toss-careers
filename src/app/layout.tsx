@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import '@/styles/reset.css';
 import '@/styles/global.css';
+import { WindowSizeProvider } from './_context/WindowSizeContext';
 
 export const metadata: Metadata = {
     title: '토스채용',
@@ -16,8 +17,10 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body>{children}</body>
-        </html>
+        <WindowSizeProvider>
+            <html lang="en">
+                <body>{children}</body>
+            </html>
+        </WindowSizeProvider>
     );
 }
