@@ -66,6 +66,7 @@ th,
 td,
 article,
 aside,
+button,
 canvas,
 details,
 embed,
@@ -90,7 +91,12 @@ video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    background-color: #ffffff00;
 }
+button {
+    cursor: pointer;
+}
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -126,4 +132,7 @@ q:after {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+a {
+    text-decoration: none;
 }
