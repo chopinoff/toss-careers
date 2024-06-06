@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import '@/styles/reset.css';
 import '@/styles/global.css';
 import { WindowSizeProvider } from './_context/WindowSizeContext';
+import NavigationBar from './_components/NavigationBar';
 
 export const metadata: Metadata = {
     title: '토스채용',
@@ -19,7 +20,10 @@ export default function RootLayout({
     return (
         <WindowSizeProvider>
             <html lang="en">
-                <body>{children}</body>
+                <body>
+                    <NavigationBar />
+                    {children}
+                </body>
             </html>
         </WindowSizeProvider>
     );
